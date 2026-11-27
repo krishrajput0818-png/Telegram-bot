@@ -1,3 +1,4 @@
+import asyncio
 import os
 import threading
 from flask import Flask
@@ -307,4 +308,7 @@ def main():
 
 
 if __name__ == "__main__":
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
     main()
+    
